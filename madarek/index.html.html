@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مدارک موردنیاز ثبت‌نام | اداره آموزش</title>
+  <meta name="description" content="فهرست مدارک موردنیاز برای ثبت‌نام؛ نسخه سبک، سازگار با موبایل و قابل چاپ." />
+  <style>
+    :root{
+      --bg:#f7f7fb; --card:#ffffff; --text:#0f172a; --muted:#64748b; --brand:#2563eb; --brand-2:#1d4ed8; --border:#e5e7eb;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{--bg:#0b1220; --card:#0f172a; --text:#e5e7eb; --muted:#9aa4b2; --brand:#60a5fa; --brand-2:#3b82f6; --border:#1f2937}
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, "IRANSans", Vazirmatn, Tahoma, Arial;}
+    .container{max-width:980px;margin:auto;padding:20px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.75);backdrop-filter: blur(10px);border-bottom:1px solid var(--border);z-index:10}
+    @media (prefers-color-scheme: dark){header{background:rgba(15,23,42,.6)}}
+    .nav{display:flex;gap:12px;align-items:center;justify-content:space-between;max-width:980px;margin:auto;padding:10px 20px}
+    .nav h1{font-size:18px;margin:0;font-weight:800}
+    .btn{border:1px solid var(--border);background:var(--card);padding:8px 12px;border-radius:12px;cursor:pointer}
+    .btn:hover{border-color:var(--brand)}
+    .brand{color:var(--brand)}
+    .pill{background:var(--brand);color:white;border:none}
+    .search{width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
+    details{border:1px solid var(--border);border-radius:14px;padding:10px;background:var(--card)}
+    summary{cursor:pointer;font-weight:700}
+    ul{margin:6px 0 0 0}
+    .muted{color:var(--muted);font-size:14px}
+    .footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .notice{border-inline-start:4px solid var(--brand);padding:10px 12px;background:rgba(37,99,235,.06);border-radius:10px}
+    .kebab{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{padding:4px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px}
+    .desktop-hide{display:block}
+    @media (min-width:640px){.desktop-hide{display:none}}
+    .print-hide{@media print{display:none !important}}
+    .print-only{display:none}@media print{.print-only{display:block}}
+    .toc a{color:inherit;text-decoration:none}
+    .toc{display:flex;gap:8px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+  <header class="print-hide">
+    <nav class="nav">
+      <h1>مدارک موردنیاز <span class="brand">ثبت‌نام</span></h1>
+      <div class="kebab">
+        <button class="btn" id="copyLinkBtn" title="کپی لینک">کپی آدرس صفحه</button>
+        <button class="btn pill" onclick="window.print()" title="چاپ / PDF">چاپ / PDF</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <p class="muted">این صفحه برای اطلاع‌رسانی سریع مدارک موردنیاز طراحی شده است؛ سبک، سازگار با موبایل و قابل چاپ. برای به‌روزرسانی متن، فایل HTML را ویرایش و جایگزین کنید.</p>
+      <div class="toc muted">
+        <span>رفتن به: </span>
+        <a href="#iran">ایرانی</a> ·
+        <a href="#foreign">اتباع</a> ·
+        <a href="#grade7">پایه هفتم</a> ·
+        <a href="#transfer">انتقالی</a> ·
+        <a href="#notes">تبصره‌ها</a> ·
+        <a href="#contact">تماس</a>
+      </div>
+      <div style="margin-top:10px">
+        <input id="q" class="search" placeholder="جست‌وجو در مدارک (مثلاً: کارت ملی، واکسیناسیون…)" />
+      </div>
+      <div class="muted" style="margin-top:8px">آخرین به‌روزرسانی: <span id="lastUpdate"></span></div>
+    </section>
+
+    <section class="grid" id="list">
+
+      <div class="card" id="iran">
+        <h2>مدارک دانش‌آموزان ایرانی</h2>
+        <details open>
+          <summary>ثبت‌نام پایه اول تا ششم</summary>
+          <ul>
+            <li>اصل و کپی <strong>شناسنامه دانش‌آموز</strong> (تمام صفحات)</li>
+            <li>کارت ملی دانش‌آموز (در صورت وجود)</li>
+            <li>سه قطعه عکس ۳×۴ جدید</li>
+            <li>کارنامه سال قبل / گواهی قبولی</li>
+            <li>دفترچه سلامت یا کارت واکسیناسیون (برای پایه اول ضروری)</li>
+            <li>قبض یا <strong>گواهی محل سکونت</strong> معتبر</li>
+          </ul>
+        </details>
+        <details>
+          <summary>ثبت‌نام میان‌پایه</summary>
+          <ul>
+            <li>پرونده تحصیلی کامل از مدرسه قبلی</li>
+            <li>فرم‌های انضباطی و آموزشی تکمیل‌شده</li>
+            <li>تسویه‌حساب کتابخانه و سرویس (در صورت وجود)</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="card" id="foreign">
+        <h2>مدارک دانش‌آموزان اتباع</h2>
+        <details open>
+          <summary>پایه ششم (اعتبارسنجی برای ورود به پایه هفتم)</summary>
+          <ul>
+            <li>مدرک هویتی معتبر (کارت آمایش / برگه حمایت تحصیلی / گذرنامه معتبر)</li>
+            <li>کارنامه پایه ششم و کد دانش‌آموزی</li>
+            <li>استعلام و <strong>اعتبارسنجی</strong> از سامانه مربوط (توسط دبستان)</li>
+            <li>عکس ۳×۴ جدید (دو قطعه)</li>
+            <li>آدرس و تلفن سرپرست</li>
+          </ul>
+        </details>
+        <details>
+          <summary>پایه‌های دیگر</summary>
+          <ul>
+            <li>مدارک هویتی معتبر طبق بخشنامه سال جاری</li>
+            <li>سوابق تحصیلی و پرونده از مدرسه قبلی</li>
+            <li>استعلام اقامت و سکونت</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="card" id="grade7">
+        <h2>ویژه ثبت‌نام پایه هفتم (ورود به متوسطه اول)</h2>
+        <details open>
+          <summary>مدارک عمومی</summary>
+          <ul>
+            <li>کارنامه قبولی پایه ششم</li>
+            <li>گواهی پایۀ تحصیلی و کد انتقال</li>
+            <li>پرونده سلامت دانش‌آموز</li>
+            <li>عکس ۳×۴ (دو قطعه)</li>
+          </ul>
+        </details>
+        <details>
+          <summary>توضیح درباره دسترسی سامانه</summary>
+          <div class="notice">
+            با توجه به اینکه مدیران متوسطه اول برای ثبت‌نام دانش‌آموزان اتباع پایه هفتم دسترسی به سیدای ابتدایی را ندارند، 
+            مقتضی است مدیران محترم مدارس ابتدایی نسبت به <strong>استعلام و اعتبارسنجی</strong> دانش‌آموزان اتباع پایه ششم اقدام لازم را معمول دارند.
+          </div>
+        </details>
+      </div>
+
+      <div class="card" id="transfer">
+        <h2>انتقالی و میان‌استانی</h2>
+        <details open>
+          <summary>مدارک انتقال</summary>
+          <ul>
+            <li>کد انتقال از مدرسه مبدأ</li>
+            <li>پرونده تحصیلی مهر و موم‌شده</li>
+            <li>تسویه‌حساب کتاب درسی / سرویس / بیمه</li>
+            <li>گواهی محل سکونت جدید</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="card" id="notes">
+        <h2>تبصره‌ها و یادداشت‌های مهم</h2>
+        <ul>
+          <li>اصل مدارک هنگام ثبت‌نام حضوری الزامی است؛ کپی‌ها برابر اصل شود.</li>
+          <li>مدارک می‌بایست مربوط به سال تحصیلی جاری باشد.</li>
+          <li>در صورت مغایرت اطلاعات، مدرسه مجاز به عدم ثبت‌نام است تا رفع نقص صورت گیرد.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="footer card" id="contact">
+      <div>
+        <h3>راه‌های ارتباط</h3>
+        <p class="muted">[نام اداره/مدرسه] — واحد ثبت‌نام</p>
+        <p class="muted">تلفن: <span dir="ltr">[0xx-xxxxxxx]</span> | نشانی: [آدرس کامل]</p>
+      </div>
+      <div>
+        <div class="tag">نسخه: 1.0</div>
+        <div class="tag" id="todayTag">—</div>
+      </div>
+    </section>
+
+    <p class="muted" style="text-align:center;margin:14px 0">برای چاپ پاکیزه، از دکمه «چاپ / PDF» بالای صفحه استفاده کنید.</p>
+
+  </main>
+
+  <script>
+    // آخرین به‌روزرسانی (از تاریخ فایل)
+    const lastUpdate = new Date(document.lastModified);
+    document.getElementById('lastUpdate').textContent = lastUpdate.toLocaleDateString('fa-IR');
+    document.getElementById('todayTag').textContent = 'امروز: ' + (new Date()).toLocaleDateString('fa-IR');
+
+    // کپی لینک صفحه
+    document.getElementById('copyLinkBtn').addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(location.href);
+        alert('آدرس صفحه کپی شد.');
+      }catch(e){
+        prompt('کپی نشد، دستی کپی کنید:', location.href);
+      }
+    });
+
+    // جست‌وجوی زنده در آیتم‌ها
+    const q = document.getElementById('q');
+    q.addEventListener('input', () => {
+      const term = q.value.trim();
+      const list = document.getElementById('list');
+      const items = list.querySelectorAll('li');
+      if(!term){
+        items.forEach(li => li.style.display = 'list-item');
+        return;
+      }
+      const rx = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      items.forEach(li => {
+        li.style.display = rx.test(li.textContent) ? 'list-item' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
